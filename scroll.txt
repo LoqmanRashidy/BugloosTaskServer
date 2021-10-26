@@ -1,0 +1,7 @@
+<ul infiniteScroll (scrolled)="getItems()">
+  <li *ngFor="let item of items; trackBy:trackByFn">{{item}}</li>
+</ul>
+
+trackByFn(i: number, item) {
+  return item.<unique-key>;
+}

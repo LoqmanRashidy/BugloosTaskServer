@@ -1,0 +1,53 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>fc1b26ae-63fa-47c9-95cd-22727840e46e</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="UploadFiles\Category\**" />
+    <Compile Remove="UploadFiles\Components\**" />
+    <Compile Remove="UploadFiles\Customers\**" />
+    <Compile Remove="UploadFiles\Products\**" />
+    <Compile Remove="UploadFiles\Sliders\**" />
+    <Content Remove="UploadFiles\Category\**" />
+    <Content Remove="UploadFiles\Components\**" />
+    <Content Remove="UploadFiles\Customers\**" />
+    <Content Remove="UploadFiles\Products\**" />
+    <Content Remove="UploadFiles\Sliders\**" />
+    <EmbeddedResource Remove="UploadFiles\Category\**" />
+    <EmbeddedResource Remove="UploadFiles\Components\**" />
+    <EmbeddedResource Remove="UploadFiles\Customers\**" />
+    <EmbeddedResource Remove="UploadFiles\Products\**" />
+    <EmbeddedResource Remove="UploadFiles\Sliders\**" />
+    <None Remove="UploadFiles\Category\**" />
+    <None Remove="UploadFiles\Components\**" />
+    <None Remove="UploadFiles\Customers\**" />
+    <None Remove="UploadFiles\Products\**" />
+    <None Remove="UploadFiles\Sliders\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ServiceLayer\ServiceLayer.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNet.WebApi.WebHost" Version="5.2.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.8" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Protocols.MessagePack" Version="5.0.10" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Protocols.NewtonsoftJson" Version="5.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="MultipartDataMediaFormatter.V2" Version="2.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="UploadFiles\Course\" />
+    <Folder Include="UploadFiles\Person\" />
+  </ItemGroup>
+
+
+</Project>
